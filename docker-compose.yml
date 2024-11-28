@@ -1,0 +1,19 @@
+services:
+  minha-api-rest:
+    build:
+      context: .
+    ports:
+      - "3000:3000" # Porta para acessar a API fora do container
+    networks:
+      - app-network
+
+  web-application:
+    build:
+      context: web-application
+    ports:
+      - "80:80" # Porta para acessar o frontend fora do container
+    networks:
+      - app-network
+
+networks:
+  app-network:

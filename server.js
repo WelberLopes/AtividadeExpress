@@ -1,11 +1,7 @@
-const express = require('express');
-const app = express();
-const PORT = 3000; //porta 
 
-// Endpoint REST
-app.get('/api', (req, res) => {
-    res.json({ message: 'Digite aqui sua mensagem a ser exibida no EndPoint padrão' });
-});
+import app from "./app.js"
+
+const PORT = 3000; //porta 
 
 // Iniciando o servidor
 app.listen(PORT, () => {
